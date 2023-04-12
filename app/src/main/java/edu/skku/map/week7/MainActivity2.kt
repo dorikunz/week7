@@ -17,12 +17,7 @@ class MainActivity2 : AppCompatActivity() {
         setContentView(R.layout.activity_main2)
 
         val time = intent.getStringExtra(MainActivity.TIME)
-        //val hour = intent.getStringExtra(MainActivity.HOUR)
-        //val minute = intent.getStringExtra(MainActivity.MINUTE)
         val description = intent.getStringExtra(MainActivity.DESCRIPTION)
-
-        //val hour = time!!.split(":")[0]
-        //val minute = time.split(":")[1]
         val message = findViewById<TextView>(R.id.message)
         message.text = "Do you want to set alarm on time $time with description '$description'?"
 
