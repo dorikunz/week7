@@ -28,7 +28,6 @@ class MainActivity2 : AppCompatActivity() {
 
         val intent = Intent(AlarmClock.ACTION_SET_ALARM).apply {
             putExtra(AlarmClock.EXTRA_MESSAGE, description)
-            Log.v("TIME", time.toString())
             putExtra(AlarmClock.EXTRA_HOUR, time!!.split(":")[0].toInt())
             putExtra(AlarmClock.EXTRA_MINUTES, time.split(":")[1].toInt())
             }

@@ -21,19 +21,17 @@ class MainActivity : AppCompatActivity() {
         val editTextTime = findViewById<EditText>(R.id.editTime)
         val editDescription = findViewById<EditText>(R.id.description)
 
-
         val btnNewActivity = findViewById<Button>(R.id.button)
         btnNewActivity.setOnClickListener {
+
             val time = editTextTime.text.toString()
             val description = editDescription.text.toString()
             val intent = Intent(this, MainActivity2::class.java).apply{
-
                 putExtra(TIME, time)
                 putExtra(DESCRIPTION, description)
             }
             startActivity(intent)
         }
-
     }
     override fun onResume(){
         super.onResume()
